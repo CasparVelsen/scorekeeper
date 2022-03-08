@@ -3,9 +3,10 @@
   border: none;
   padding: 4px, 12px;
   font-size: 1em;
+  width: 40vw;
 }
 
 .Button--dark {
-  background-color: #666;
+  background-color: rgb(40, 40, 40);
   color: white;
 }

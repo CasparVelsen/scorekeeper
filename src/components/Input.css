@@ -1,0 +1,29 @@
+.Input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid rgb(214, 214, 214);
+  padding: 10px;
+  width: 80vw;
+}
+
+.Input--dark {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid black;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  padding: 10px;
+}
+
+.Input__title {
+  font-family: sans-serif;
+  color: grey;
+}
+
+.Input__textfield {
+  font-family: sans-serif;
+  padding: 10px;
+  color: rgb(171, 171, 171);
+}
