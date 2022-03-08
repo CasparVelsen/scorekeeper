@@ -21,6 +21,7 @@ function App() {
         <Button children={"start Game"} isDark={false} />
         <Button children={"History"} isDark={true} />
       </div>
+      <Player name={"Max Mustermann"} score={"10"} />
     </main>
   );
 }

@@ -1,6 +1,9 @@
 .Player {
   display: flex;
   justify-content: right;
+  width: 80vw;
+  border: 1px solid grey;
+  padding: 20px;
 }
 
 .Player__name {
