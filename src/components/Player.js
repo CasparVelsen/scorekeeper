@@ -1,16 +1,32 @@
-import "./Player.css";
+import styled from "styled-components"
 
 export default function Player({ name, score, onDecrement, onIncrement }) {
   return (
-    <section className="Player">
-      <span className="Player__name">{name}</span>
-      <button className="Player__button" onClick={onDecrement}>
+    <PlayerBoard>
+      <PlayerName>{name}</PlayerName>
+      <button onClick={onDecrement}>
         -
       </button>
-      <span className="Player__score">{score}</span>
-      <button className="Player__button" onClick={onIncrement}>
+      <PlayerScore>{score}</PlayerScore>
+      <button onClick={onIncrement}>
         +
       </button>
-    </section>
+    </PlayerBoard>
   );
 }
+
+const PlayerBoard = styled.section`
+display: flex;
+justify-content: right;
+width: 80vw;
+border: 1px solid rgb(40, 40, 40);
+padding: 20px;
+`;
+
+const PlayerName = styled.span`
+margin-right: auto;
+`;
+
+const PlayerScore = styled.span`
+margin: 0px 10px
+`;
