@@ -10,8 +10,6 @@ body {
   font-size: 112.5%;
   line-height: 1.5;
   margin: 0;
-  height: 100vh;
-
 }
 
 input,
