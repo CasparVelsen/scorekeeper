@@ -1,25 +1,23 @@
-import Button from "./components/Button";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import GamePage from "./pages/GamePage";
+import HistoryPage from "./pages/HistoryPage";
+
+import Nav from "./components/Nav";
 import Player from "./components/Player";
 import Form from "./components/Form";
 
-import styled from "styled-components";
-
-import "./App.css";
-
 function App() {
   return (
-    <Main>
-      <Form />
-      <Player name={"Max Mustermann"} score={"10"} />
-    </Main>
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/game" element={<GamePage />} />
+        <Route path="/history" element={<HistoryPage />} />
+      </Routes>
+      <Nav />
+    </div>
   );
 }
 
 export default App;
-
-const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-`;
