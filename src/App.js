@@ -2,11 +2,13 @@ import Input from "./components/Input";
 import Button from "./components/Button";
 import Player from "./components/Player";
 
+import styled from "styled-components";
+
 import "./App.css";
 
 function App() {
   return (
-    <main className="App">
+    <Main>
       <Input
         title={"Type in your name:"}
         placeholder={"e.g. Max Mustermann"}
@@ -22,8 +24,15 @@ function App() {
         <Button children={"History"} isDark={true} />
       </div>
       <Player name={"Max Mustermann"} score={"10"} />
-    </main>
+    </Main>
   );
 }
 
 export default App;
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+`;
