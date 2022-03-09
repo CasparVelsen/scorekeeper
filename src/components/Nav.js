@@ -20,8 +20,8 @@ const LinkStyled = styled(NavLink)`
   width: 100%;
 
   &.active {
-    background: papayawhip;
-    color: salmon;
+    background: lightblue;
+    color: #666;
   }
 `;
 

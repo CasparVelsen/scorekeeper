@@ -7,8 +7,9 @@ export default function Header({ children }) {
 const StyledHeader = styled.header`
   height: 60px;
   width: 100%;
-  background-color: #666;
-  color: white;
+  font-size: 2rem;
+  background-color: lightblue;
+  color: #666;
   display: flex;
   justify-content: center;
   align-items: center;
