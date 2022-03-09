@@ -1,12 +1,18 @@
-import "./Button.css";
+import styled from "styled-components";
 
 export default function Button({ children, onClick, isDark }) {
   return (
-    <button
-      className={isDark ? "Button Button--dark" : "Button"}
-      onClick={onClick}
-    >
+    <StyledButton isDark={true} onClick={onClick}>
       {children}
-    </button>
+    </StyledButton>
   );
 }
+
+const StyledButton = styled.button`
+  background-color: ${(props) => (props.isDark ? "#666" : "#ddd")};
+  color: ${(props) => (props.isDark ? "white" : "black")};
+  border: 1px solid rgb(40, 40, 40);
+  padding: 4px, 12px;
+  font-size: 1em;
+  width: 50%;
+`;

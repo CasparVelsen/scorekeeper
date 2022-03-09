@@ -1,15 +1,27 @@
-import "./Input.css";
+import styled from "styled-components";
 
 export default function Input({ title, placeholder, isDark }) {
   return (
-    <form className={isDark ? "Input Input--dark" : "Input"}>
-      <label className="Input__title">{title}</label>
-      <input
-        className="Input__textfield"
+    <>
+      <InputTitle>{title}</InputTitle>
+      <InputTextfield
         name="nameOfPlayer"
         placeholder={placeholder}
         type="text"
-      ></input>
-    </form>
+      ></InputTextfield>
+    </>
   );
 }
+
+const InputTitle = styled.label`
+  left: 0;
+  font-family: sans-serif;
+  color: grey;
+`;
+
+const InputTextfield = styled.input`
+  font-family: sans-serif;
+  padding: 10px;
+  color: rgb(171, 171, 171);
+  width: 100%;
+`;

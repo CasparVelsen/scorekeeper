@@ -12,10 +12,3 @@ Light.args = {
   title: "Type in your name:",
   placeholder: "e.g. Jane Doe",
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-  title: "Type in your name:",
-  placeholder: "e.g. Jane Doe",
-  isDark: true,
-};
