@@ -1,3 +1,9 @@
+import Header from "../components/Header";
+
 export default function HistoryPage() {
-  return <h1>HistoryPage</h1>;
+  return (
+    <>
+      <Header children={"HistoryPage"} />
+    </>
+  );
 }

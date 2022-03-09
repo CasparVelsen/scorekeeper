@@ -1,7 +1,7 @@
 import Player from "./Player";
 
 export default {
-  title: "components/Player",
+  title: "Player",
   component: Player,
 };
 

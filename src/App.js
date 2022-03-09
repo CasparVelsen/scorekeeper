@@ -15,7 +15,9 @@ function App() {
         <Route path="/game" element={<GamePage />} />
         <Route path="/history" element={<HistoryPage />} />
       </Routes>
-      <Nav />
+      <footer>
+        <Nav />
+      </footer>
     </div>
   );
 }
