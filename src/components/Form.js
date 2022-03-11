@@ -16,19 +16,19 @@ export default function Form({ onCreateGame }) {
       autoComplete="off"
     >
       <Input
-        name="playerNames"
-        title={"Type in your name:"}
-        placeholder={"e.g. Max Mustermann"}
-        onChange={(event) => setPlayerNames(event.target.value)}
-        value={playerNames}
-        required
-      />
-      <Input
         name="nameOfGame"
         title={"Name your game:"}
         placeholder={"e.g. Siedler von Catan"}
         onChange={(event) => setNameOfGame(event.target.value)}
         value={nameOfGame}
+        required
+      />
+      <Input
+        name="playerNames"
+        title={"Type in your name:"}
+        placeholder={"e.g. Max Mustermann"}
+        onChange={(event) => setPlayerNames(event.target.value)}
+        value={playerNames}
         required
       />
       <Button disabled={disabled} isDark={false}>

@@ -19,7 +19,7 @@ export default function GamePage({
           <Player
             name={name}
             score={score}
-            nDecreasePlayerScore={() => onDecreasePlayerScore(index)}
+            onDecreasePlayerScore={() => onDecreasePlayerScore(index)}
             onIncreasePlayerScore={() => onIncreasePlayerScore(index)}
             key={id}
           />
