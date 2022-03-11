@@ -1,13 +1,16 @@
 import Input from "./Input";
 import Button from "./Button";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export default function Form() {
   return (
     <InputForm>
       <Input title={"Type in your name:"} placeholder={"e.g. Max Mustermann"} />
       <Input title={"Name your game:"} placeholder={"e.g. Siedler von Catan"} />
-      <Button>Submit</Button>
+      <NavLink to="/game">
+        <Button isDark={false}>Create game</Button>
+      </NavLink>
     </InputForm>
   );
 }
@@ -17,8 +20,6 @@ const InputForm = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  border: 1px solid rgb(214, 214, 214);
-  padding: 10px;
-  width: 80vw;
-  background-color: #ddd;
+  margin-top: -15px;
+  width: 100%px;
 `;

@@ -2,19 +2,18 @@ import styled from "styled-components";
 
 export default function Input({ title, placeholder, isDark }) {
   return (
-    <>
+    <div>
       <InputTitle>{title}</InputTitle>
       <InputTextfield
         name="nameOfPlayer"
         placeholder={placeholder}
         type="text"
       ></InputTextfield>
-    </>
+    </div>
   );
 }
 
 const InputTitle = styled.label`
-  left: 0;
   font-family: sans-serif;
   color: grey;
 `;
