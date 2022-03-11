@@ -1,29 +1,27 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import GamePage from "./pages/GamePage";
 import HistoryPage from "./pages/HistoryPage";
-
+import { nanoid } from "nanoid";
 import styled from "styled-components";
 
 import Nav from "./components/Nav";
 
 function App() {
-  const [players, setPlayers] = useState([
-    { name: "Player 1", score: 0, id: "1" },
-    { name: "Player 2", score: 0, id: "2" },
-    { name: "Player 3", score: 0, id: "3" },
-    { name: "Player 4", score: 0, id: "4" },
-  ]);
+  const [players, setPlayers] = useState([]);
+  const [nameOfGame, setNameOfGame] = useState("");
+  const navigate = useNavigate();
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage onCreateGame={createGame} />} />
         <Route
           path="/game"
           element={
             <GamePage
+              nameOfGame={nameOfGame}
               players={players}
               onDecreasePlayerScore={decreasePlayerScore}
               onIncreasePlayerScore={increasePlayerScore}
@@ -37,6 +35,12 @@ function App() {
       </Footer>
     </>
   );
+
+  function createGame({ nameOfGame, playerNames }) {
+    setNameOfGame(nameOfGame);
+    setPlayers(playerNames.map((name) => ({ name, score: 0, id: nanoid() })));
+    navigate("/game");
+  }
 
   function increasePlayerScore(index) {
     const currentPlayer = players[index];

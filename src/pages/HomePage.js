@@ -2,13 +2,13 @@ import Form from "../components/Form";
 import Header from "../components/Header";
 import styled from "styled-components";
 
-export default function HomePage() {
+export default function HomePage({ onCreateGame }) {
   return (
     <>
       <Header children={"Scorekeeper"} />
       <Main>
         <Title>Start a game:</Title>
-        <Form />
+        <Form onCreateGame={onCreateGame} />
       </Main>
     </>
   );

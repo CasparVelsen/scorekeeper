@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from "../components/Header";
 import Player from "../components/Player";
 import styled from "styled-components";
@@ -6,6 +5,7 @@ import Button from "../components/Button";
 import { NavLink } from "react-router-dom";
 
 export default function GamePage({
+  nameOfGame,
   players,
   onDecreasePlayerScore,
   onIncreasePlayerScore,
@@ -14,6 +14,7 @@ export default function GamePage({
     <>
       <Header children={"Game"} />
       <Main>
+        <h2>{nameOfGame}</h2>
         {players.map(({ name, score, id }, index) => (
           <Player
             name={name}

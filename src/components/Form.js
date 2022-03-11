@@ -1,12 +1,13 @@
 import Input from "./Input";
 import Button from "./Button";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 export default function Form({ onCreateGame }) {
   const [nameOfGame, setNameOfGame] = useState("");
   const [playerNames, setPlayerNames] = useState("");
+
+  const disabled = nameOfGame === "" || playerNames === "";
 
   return (
     <InputForm
@@ -30,9 +31,9 @@ export default function Form({ onCreateGame }) {
         value={nameOfGame}
         required
       />
-      <NavLink to="/game">
-        <Button isDark={false}>Create game</Button>
-      </NavLink>
+      <Button disabled={disabled} isDark={false}>
+        Create game
+      </Button>
     </InputForm>
   );
 

@@ -1,15 +1,26 @@
 import styled from "styled-components";
 
-export default function Input({ title, placeholder, isDark }) {
+export default function Input({
+  title,
+  placeholder,
+  name,
+  value,
+  onChange,
+  required,
+}) {
   return (
-    <div>
+    <>
       <InputTitle>{title}</InputTitle>
       <InputTextfield
-        name="nameOfPlayer"
+        id={name}
+        name={name}
         placeholder={placeholder}
         type="text"
+        value={value}
+        onChange={onChange}
+        required={required}
       ></InputTextfield>
-    </div>
+    </>
   );
 }
 
