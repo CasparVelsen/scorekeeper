@@ -14,7 +14,7 @@ export default function GamePage({
     <>
       <Header children={"Game"} />
       <Main>
-        <h2>{nameOfGame}</h2>
+        <Title>{nameOfGame}</Title>
         {players.map(({ name, score, id }, index) => (
           <Player
             name={name}
@@ -42,4 +42,10 @@ const Main = styled.main`
   gap: 20px;
   padding: 30px;
   height: auto;
+`;
+
+const Title = styled.h2`
+  color: #666;
+  margin: 0;
+  font-size: 1.2em;
 `;
