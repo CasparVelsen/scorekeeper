@@ -12,4 +12,9 @@ const StyledButton = styled.button`
   padding: 5px 12px;
   font-size: 1em;
   width: 200px;
+
+  &:hover {
+    transition: 0.5s;
+    background-color: lightblue;
+  }
 `;
