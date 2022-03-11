@@ -5,14 +5,11 @@ import styled from "styled-components";
 import Button from "../components/Button";
 import { NavLink } from "react-router-dom";
 
-export default function GamePage() {
-  const [players, setPlayers] = useState([
-    { name: "Player 1", score: 0, id: "1" },
-    { name: "Player 2", score: 0, id: "2" },
-    { name: "Player 3", score: 0, id: "3" },
-    { name: "Player 4", score: 0, id: "4" },
-  ]);
-
+export default function GamePage({
+  players,
+  onDecreasePlayerScore,
+  onIncreasePlayerScore,
+}) {
   return (
     <>
       <Header children={"Game"} />
@@ -21,8 +18,8 @@ export default function GamePage() {
           <Player
             name={name}
             score={score}
-            onDecrement={() => decrementPlayerScore(index)}
-            onIncrement={() => incrementPlayerScore(index)}
+            nDecreasePlayerScore={() => onDecreasePlayerScore(index)}
+            onIncreasePlayerScore={() => onIncreasePlayerScore(index)}
             key={id}
           />
         ))}
@@ -35,24 +32,6 @@ export default function GamePage() {
       </Main>
     </>
   );
-
-  function incrementPlayerScore(index) {
-    const player = players[index];
-    setPlayers([
-      ...players.slice(0, index),
-      { ...player, score: player.score + 1 },
-      ...players.slice(index + 1),
-    ]);
-  }
-
-  function decrementPlayerScore(index) {
-    const player = players[index];
-    setPlayers([
-      ...players.slice(0, index),
-      { ...player, score: player.score - 1 },
-      ...players.slice(index + 1),
-    ]);
-  }
 }
 
 const Main = styled.main`
