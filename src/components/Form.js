@@ -1,6 +1,6 @@
 import Input from "./Input";
 import Button from "./Button";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useState } from "react";
 
 export default function Form({ onCreateGame }) {
@@ -54,5 +54,5 @@ const InputForm = styled.form`
   align-items: center;
   gap: 15px;
   margin-top: -15px;
-  width: 100%px;
+  width: 100%;
 `;
